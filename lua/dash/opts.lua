@@ -6,9 +6,15 @@
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
+-- Highlight Window Separators with Nord Colors
+vim.cmd("highlight WinSeparator guifg='#434C5E'")
+
 -- line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+-- Collapse Command Line
+vim.o.cmdheight = 0
 
 -- mouse mode
 vim.opt.mouse = "a"
@@ -70,12 +76,11 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 -- SFDX configs
 vim.filetype = on
 vim.filetype.add({
-  extension = {
-    cls = 'apex',
-    apex = 'apex',
-    trigger = 'apex',
-    soql = 'soql',
-    sosl = 'sosl'
-  }
+	extension = {
+		cls = "apex",
+		apex = "apex",
+		trigger = "apex",
+		soql = "soql",
+		sosl = "sosl",
+	},
 })
-

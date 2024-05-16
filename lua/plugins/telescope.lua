@@ -28,7 +28,7 @@ return {
 		-- See `:help telescope` and `:help telescope.setup()`
 
 		-- enable SF highlighting in previewer
-		require 'plenary.filetype'.add_file('sf_type')
+		require("plenary.filetype").add_file("sf_type")
 
 		local actions = require("telescope.actions")
 		require("telescope").setup({
@@ -40,6 +40,7 @@ return {
 					i = {
 						["<C-j>"] = actions.move_selection_next,
 						["<C-k>"] = actions.move_selection_previous,
+						["<C-CR>"] = actions.select_vertical,
 					},
 				},
 			},
